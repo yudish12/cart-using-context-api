@@ -187,13 +187,13 @@ h5 {
 
 @media screen and (max-width: 800px) {
   .cart-item h5 {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
   .cart-item span {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .remove-btn {
     margin: 10px;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
