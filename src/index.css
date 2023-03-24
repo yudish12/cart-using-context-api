@@ -173,21 +173,18 @@ h5 {
   line-height: 1;
   font-size: 1.2rem;
 }
-
 .line {
-  width: 100vw;
-  margin-top: 2rem;
+  width: 100%;
 }
 
 .total {
-  min-width: 1020px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  gap: 20rem;
-  margin-left: 7rem;
+  gap: 18.5rem;
+  margin: 1.5rem;
 }
+
 .total span {
   background-color: var(--primary-500);
   color: white;
@@ -211,5 +208,9 @@ h5 {
   }
   .phone-info h5 {
     font-size: 1rem;
+  }
+  .total {
+    min-width: 330px;
+    gap: 10rem;
   }
 }

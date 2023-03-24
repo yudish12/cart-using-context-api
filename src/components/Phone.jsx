@@ -23,30 +23,30 @@ const Phone = ({ id, name, price, image }) => {
     totalAmountDecrease(price);
   };
 
-  return (
-    amount && (
-      <div className="cart-item">
-        <img src={image} alt={name} />
-        <div className="phone-info">
-          <h5>{name}</h5>
-          <span>{price}</span>
-          <button className="remove-btn">remove</button>
-        </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <button
-            value={price}
-            onClick={() => handleIncrease(price)}
-            className="amount-btn"
-          >
-            <FaChevronUp className="icon" />
-          </button>
-          <span className="amount">{amount}</span>
-          <button onClick={() => handleDecrease(price)} className="amount-btn">
-            <FaChevronDown className="icon" />
-          </button>
-        </div>
+  return amount ? (
+    <div className="cart-item">
+      <img src={image} alt={name} />
+      <div className="phone-info">
+        <h5>{name}</h5>
+        <span>{price}</span>
+        <button className="remove-btn">remove</button>
       </div>
-    )
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <button
+          value={price}
+          onClick={() => handleIncrease(price)}
+          className="amount-btn"
+        >
+          <FaChevronUp className="icon" />
+        </button>
+        <span className="amount">{amount}</span>
+        <button onClick={() => handleDecrease(price)} className="amount-btn">
+          <FaChevronDown className="icon" />
+        </button>
+      </div>
+    </div>
+  ) : (
+    <></>
   );
 };
 
