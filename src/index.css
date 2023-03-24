@@ -198,19 +198,20 @@ h5 {
 @media screen and (max-width: 800px) {
   .nav {
     justify-content: space-between;
-    font-size: 1rem;
+    font-size: 20px;
+    min-width: 400px;
   }
   .cart-item {
-    margin-left: 0;
+    min-width: 400px;
   }
   .cart-item h5 {
-    font-size: 1rem;
+    font-size: 40px;
   }
   .cart-item span {
-    font-size: 1rem;
+    font-size: 20px;
   }
   .remove-btn {
     margin: 10px;
-    font-size: 1rem;
+    font-size: 20px;
   }
 }
