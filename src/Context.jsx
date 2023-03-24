@@ -6,6 +6,10 @@ const AppContext = ({ children }) => {
   const [totalCount, setTotalCount] = useState(4);
   const [totalAmount, setTotalAmount] = useState(2199.96);
 
+  const decreaseCount = (x) => {
+    setTotalCount(totalCount - x);
+  };
+
   const increaseTotalCount = () => {
     setTotalCount(totalCount + 1);
   };
@@ -15,10 +19,10 @@ const AppContext = ({ children }) => {
   };
 
   const totalAmountIncrease = (price) => {
-    setTotalAmount(Number(totalAmount + price));
+    setTotalAmount(Number((totalAmount + price).toFixed(2)));
   };
   const totalAmountDecrease = (price) => {
-    setTotalAmount(Number(totalAmount - price));
+    setTotalAmount(Number((totalAmount - price).toFixed(2)));
   };
 
   return (
@@ -30,6 +34,7 @@ const AppContext = ({ children }) => {
         totalAmountDecrease,
         increaseTotalCount,
         decreaseTotalCount,
+        decreaseCount,
       }}
     >
       {children}

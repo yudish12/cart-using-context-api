@@ -8,9 +8,16 @@ const Phone = ({ id, name, price, image }) => {
   const {
     increaseTotalCount,
     decreaseTotalCount,
+    decreaseCount,
     totalAmountIncrease,
     totalAmountDecrease,
   } = useContext(GlobalContext);
+
+  const removeItem = (price) => {
+    decreaseCount(amount);
+    totalAmountDecrease(Number(Number(price) * Number(amount)));
+    setAmount(0);
+  };
 
   const handleIncrease = (price) => {
     increaseTotalCount();
@@ -29,7 +36,9 @@ const Phone = ({ id, name, price, image }) => {
       <div className="phone-info">
         <h5>{name}</h5>
         <span>{price}</span>
-        <button className="remove-btn">remove</button>
+        <button className="remove-btn" onClick={() => removeItem(price)}>
+          remove
+        </button>
       </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <button
