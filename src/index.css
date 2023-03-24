@@ -63,8 +63,10 @@ h5 {
   letter-spacing: var(--letterSpacing);
 }
 
+/* project css */
+
 .nav {
-  min-width: 1200px;
+  min-width: 1120px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -118,7 +120,7 @@ h5 {
 }
 
 .cart-item {
-  min-width: 800px;
+  min-width: 810px;
   font-family: Georgia, "Times New Roman", Times, serif;
   display: flex;
   justify-content: center;
@@ -168,7 +170,7 @@ h5 {
 }
 
 .total {
-  min-width: 1000px;
+  min-width: 1020px;
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
