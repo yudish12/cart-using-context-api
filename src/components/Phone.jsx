@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { GlobalContext } from "../Context";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
-const Phone = ({ name, price, image }) => {
+const Phone = ({ id, name, price, image }) => {
   const [amount, setAmount] = useState(1);
   const {
     increaseTotalCount,
@@ -27,7 +27,7 @@ const Phone = ({ name, price, image }) => {
     amount && (
       <div className="cart-item">
         <img src={image} alt={name} />
-        <div>
+        <div className="phone-info">
           <h5>{name}</h5>
           <span>{price}</span>
           <button className="remove-btn">remove</button>

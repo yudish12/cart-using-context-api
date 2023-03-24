@@ -8,27 +8,27 @@ import Phone from "./Phone";
 const Home = () => {
   const { totalCount, totalAmount } = useContext(GlobalContext);
   return (
-    <div>
+    <>
       <Header />
-      <p>{totalCount}</p>
-      {totalCount ? (
-        <div>
-          {MobilePhones.map((e) => (
-            <Phone {...e} />
-          ))}
-        </div>
-      ) : (
-        <div>
-          <h2>Your Bag Is Empty</h2>
-        </div>
-      )}
-
-      <hr className="line" />
+      <div className="mobile-container">
+        {totalCount ? (
+          <>
+            {MobilePhones.map((e) => (
+              <Phone {...e} />
+            ))}
+          </>
+        ) : (
+          <div className="home">
+            <h2>Your Bag Is Empty</h2>
+          </div>
+        )}
+      </div>
+      {/* <hr className="line" />
       <div className="total">
         <h4>Total</h4>
         <span>${totalAmount}</span>
-      </div>
-    </div>
+      </div> */}
+    </>
   );
 };
 
